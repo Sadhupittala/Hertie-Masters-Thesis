@@ -80,9 +80,9 @@ def get_tweets(start_date, end_date, query, data = [], next_page = None):
 
 if __name__ == "__main__":
 
-################### cruz 2020 ###############################
-    start_date = datetime.datetime(2019, 1, 1).astimezone()
-    end_date = datetime.datetime(2020, 11, 30).astimezone()
+################### Ted Cruz ###############################
+    start_date = datetime.datetime(2015, 1, 1).astimezone()
+    end_date = datetime.datetime(2016, 11, 30).astimezone()
     cruz_query = 'ted cruz OR #cruz2016 lang:en -is:retweet'
     data, next_page, start_date = get_tweets(start_date, end_date, cruz_query)
     keys = data[0].keys()
@@ -92,9 +92,9 @@ if __name__ == "__main__":
         dict_writer.writeheader()
         dict_writer.writerows(data)
 
-####################### bernie sanders 2020 ######################
-    start_date = datetime.datetime(2019, 1, 1).astimezone()
-    end_date = datetime.datetime(2020, 11, 30).astimezone()
+####################### bernie sanders ######################
+    start_date = datetime.datetime(2015, 1, 1).astimezone()
+    end_date = datetime.datetime(2016, 11, 30).astimezone()
     bernie_query = 'bernie sanders OR #feelthebern lang:en -is:retweet'
     data, next_page, start_date = get_tweets(start_date, end_date, bernie_query)
     keys = data[0].keys()
